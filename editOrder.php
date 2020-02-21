@@ -10,18 +10,12 @@ if (!empty($_FILES['images']['name'])  && !empty($_FILES['attachments']['name'])
             $phone=trim($_POST["phone"]);
             $product_type=trim($_POST['product_type']);
             $message=trim($_POST['message']);
-            
-            // echo "<script>alert($name+ ' ' +$email+' '+ $product_type+ ' '+$message )</script>";
           
             $fname=$_FILES['images']['name'];
             $destination="./images/".$fname;
             $destination_image="./images/".$fname;
             move_uploaded_file($_FILES['images']['tmp_name'],$destination);
       
-                
-      
-            
-          
             $filename=$_FILES['attachments']['name'];
             $ra1=rand(1111,9999);
             $ra2=rand(1111,9999);
@@ -30,9 +24,6 @@ if (!empty($_FILES['images']['name'])  && !empty($_FILES['attachments']['name'])
             $doc="./attachments/".$ra3.$filename;
             $destination_doc="./attachments/".$ra3.$filename;
             move_uploaded_file($_FILES['attachments']['tmp_name'],$doc);
-      
-      
-      
       
          if(!empty($name) )
           {
