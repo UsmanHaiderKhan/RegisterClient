@@ -21,7 +21,7 @@
                 <table class="table table-hover table-striped table-light">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Id</th>
+                          
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
@@ -41,12 +41,12 @@
                                   ?>
                             <tbody>
                                 <tr>
-                                    <td><?php echo $value['id']; ?></td>
-                                    <td><?php echo $value['username']; ?></td>
+                                   
+                                    <td><?php echo $value['name']; ?></td>
                                     <td><?php echo $value['email']; ?></td>
                                     <td><?php echo $value['phone']; ?></td>
                                     <td><?php echo $value['product_type']; ?></td>
-                                    <td><img src="./../<?php echo $value['images']?>" alt="" width=40; height:40; /></td>
+                                    <td><img src="../<?php echo $value['images']?>" alt="" width=40; height:40; /></td>
                                     <td><?php echo $value['message']; ?></td>
                                     <td>
                                     <a href="edit.php?edit=<?php echo $value["id"]; ?>"><span class="btn btn-warning btn-sm">Edit</span></a>
