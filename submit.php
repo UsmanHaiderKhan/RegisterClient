@@ -4,9 +4,9 @@ $response=array(
     'message' => "Failed to Post the form data.Please try Again..."
 );
 
-  if (isset($_POST['username'])) {
+  if (isset($_POST['name'])) {
 
-      $username=trim($_POST['username']);
+      $name=trim($_POST['name']);
       $email=trim($_POST['email']);
       $phone=trim($_POST['phone']);
       $product_type=trim($_POST['product_type']);
@@ -35,8 +35,8 @@ $response=array(
          if ($uploadStatus==1 || empty($username)|| empty($email) || empty($phone) || empty($destination_image) || empty($destination_doc) || empty($message)) {
          include_once "./connection.php";
             
-            $insert="insert into client (username,email,phone,product_type,images,attachments,message) 
-            VALUES('$username','$email','$phone','$product_type','$destination_image','$destination_doc','$message')";
+            $insert="insert into client (name,email,phone,product_type,images,attachments,message) 
+            VALUES('$name','$email','$phone','$product_type','$destination_image','$destination_doc','$message')";
             $statement = $conn->prepare($insert);
             $result = $statement->execute();
             if ($result) {
