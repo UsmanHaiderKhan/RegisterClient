@@ -18,7 +18,7 @@ $response=array(
       $r3=$r1.$r2;
       $r3=md5($r3);
       $destination="./images/".$r3.$fname;
-      $destination_image="images/".$r3.$fname;
+      $destination_image="./images/".$r3.$fname;
       move_uploaded_file($_FILES['images']['tmp_name'],$destination);
 
       $filename=$_FILES['attachments']['name'];
@@ -52,7 +52,7 @@ $response=array(
             }
          }
          else {
-            echo "what happen";
+            echo "Please Fill All the fields...!";
          }
      } 
       else{
