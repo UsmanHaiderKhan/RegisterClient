@@ -1,0 +1,93 @@
+.water-mark {
+	color: lightgray;
+	font-size: 14px;
+	font-family: "poppins";
+}
+@font-face {
+	src: url(../font/Poppins-Medium.ttf);
+	font-family: "poppins";
+}
+::placeholder {
+	font-size: 14px;
+	color: darkgray;
+	font-family: "poppins";
+}
+.form-control {
+	border-radius: 0;
+	height: 54px;
+	resize: none;
+	color: darkgray;
+	border: 1px solid darkgray;
+}
+.heading {
+	font-size: 40px;
+	color: brown;
+	text-align: center;
+	font-family: "poppins";
+}
+.wrap {
+	cursor: pointer;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	height: 55px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	font-family: "Poppins", sans-serif;
+	overflow: hidden;
+	padding: 0 20px;
+	border: 0.3px solid darkgray;
+}
+.wrap input[type="file"] {
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+select {
+	font-size: 14px;
+	color: darkgray;
+	margin: 0;
+	font-family: "poppins";
+}
+select > option {
+	font-size: 14px;
+	color: darkgray;
+	margin: 0;
+	font-family: "poppins";
+}
+.wrap #filename {
+	width: 60%;
+	display: block;
+	margin: 0;
+	color: darkgray;
+	font-family: "poppins";
+	text-align: left;
+}
+.wrap #filenames {
+	width: 60%;
+	display: block;
+	margin: 0;
+	color: darkgray;
+	font-family: "poppins";
+	text-align: left;
+}
+.wrap span {
+	padding: 6px 15px;
+	font-size: 12px;
+	box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+#register-form .btn-warning {
+	height: 54px;
+	border: 0.3px solid darkgray;
+	border-radius: 0;
+	font-family: "poppins";
+}
+.mt-50 {
+	margin-top: 84px;
+}
