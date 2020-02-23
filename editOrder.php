@@ -3,7 +3,8 @@
 <?php require_once "./utility.php";  ?>
 
 <?php
-if (!empty($_FILES['images']['name'])  && !empty($_FILES['attachments']['name'])) {
+if (!empty($_FILES['images']['name'])  || !empty($_FILES['attachments']['name'])) {
+      echo "Updated image";
       if(isset($_POST["name"])){
             $name=trim($_POST["name"]);
             $email=trim($_POST["email"]);
@@ -27,9 +28,7 @@ if (!empty($_FILES['images']['name'])  && !empty($_FILES['attachments']['name'])
       
          if(!empty($name) )
           {
-                echo "Entetr in Query";
               $PostEditId=$_GET['id'];
-              echo $PostEditId;
               $sql="update client set name='$name', email='$email', phone='$phone', product_type='$product_type',
                images='$destination_image', attachments='$destination_doc', message='$message' where id='$PostEditId' " ;
               $statement = $conn->prepare($sql);
