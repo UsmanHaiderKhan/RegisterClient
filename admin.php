@@ -25,7 +25,7 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-11">
+            <div class="col-lg-12">
                 <h2 class="heading">Your Order Details</h2>
                 <div><?php echo SuccessMessage(); echo ErrorMessage(); ?></div>
                     <div class="table-responsive">
@@ -37,6 +37,7 @@
                                     <th>Phone</th>
                                     <th>Pro_Type</th>
                                     <th>Image</th>
+                                    <!-- <th>Attachments</th> -->
                                     <th>message</th>
                                     <th>Action</th>
                                 </tr>
@@ -48,14 +49,17 @@
                                 if ($result) {
                                     foreach ($statement as $value) {
                                         ?>
-                                
                                         <tr>
-                                        
                                             <td><?php echo $value['name']; ?></td>
                                             <td><?php echo $value['email']; ?></td>
                                             <td><?php echo $value['phone']; ?></td>
                                             <td><?php echo $value['product_type']; ?></td>
                                             <td><img src="<?php echo $value['images']?>" alt="" style="width:40px;height:40px "/></td>
+                                          <!-- <td>
+                                               <a href="<?php echo $value['attachments']; ?>" target="_blank">
+                                                 <embed src="<?php echo $value['attachments'] ?>" type="application/pdf"  >
+                                               </a>
+                                          </td> -->
                                             <td><?php echo $value['message']; ?></td>
                                             <td>
                                                 <a href="editOrder.php?edit=<?php echo $value["id"]; ?>"><span class="btn btn-warning btn-sm">Edit</span></a>

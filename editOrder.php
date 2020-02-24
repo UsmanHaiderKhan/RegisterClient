@@ -126,7 +126,7 @@ else {
                                           <input type="text" name="name" value="<?php echo $value['name'] ?>" class="form-control" placeholder="UserName">
                                     </div>
                                     <div class="form-group">
-                                          <input type="text" name="email" value="<?php echo $value['email'] ?>" class="form-control" placeholder="Email">
+                                          <input type="email" name="email" value="<?php echo $value['email'] ?>" class="form-control" placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                           <input type="number" name="phone" value="<?php echo $value['phone'] ?>" class="form-control" placeholder="Phone">
