@@ -82,11 +82,13 @@
                   $("#register-form").on('submit', function (e) {
                         e.preventDefault();
                         $.ajax({
-                              method: "POST",
+                              type: "POST",
                               url: 'submit.php',
                               data: new FormData(this),
-                              dataType: "FormData",
-                             
+                              dataType:'text',
+                              contentType: false,
+                              cache: false,
+                              processData: false,
                               success: function (response) {
                                     alert("Data Saved" + response);
                               },
