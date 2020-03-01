@@ -3,9 +3,9 @@
 <?php require_once "./utility.php"; ?>
 <?php
 
-if (isset($_POST["deleteData"])) {
+if (isset($_GET["deleteData"])) {
 
-      $id=$_POST["delete_id"];
+      $id=$_GET["deleteData"];
       $sql="delete from client where id='$id'";
       $statement=$conn->prepare($sql);
       $result=$statement->execute();
